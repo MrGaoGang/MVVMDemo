@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <data >
+      <variable
+          name="user"
+          type="com.gao.mvvmdemo.databinding.beans.User"/>
+      
+      <variable
+          name="user2"
+          type="com.gao.mvvmdemo.databinding.User"/>
+
+      <variable
+          name="onclickListener"
+          type="android.view.View.OnClickListener"/>
+
+
+      <variable
+          name="clickUtils"
+          type="com.gao.mvvmdemo.databinding.OnClickUtils"/>
+
+  </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:text="你点我"
+            android:id="@+id/btn1"
+            android:onClick="@{onclickListener}"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_width="match_parent"
+            android:text="第二个"
+            android:id="@+id/btn2"
+            android:onClick="@{clickUtils::onClickSecond}"
+            android:layout_height="wrap_content"/>
+
+        <!--上面的clickUtils::onClickSecond 函数名必须对应-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user2.name}" />
+
+        <!--注意：这里age是int类型，必须转化为String，否则会运行时异常-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(user.age)}" />
+    </LinearLayout>
+</layout>

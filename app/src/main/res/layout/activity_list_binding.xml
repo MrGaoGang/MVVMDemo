@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.gao.mvvmdemo.databinding.User"/>
+
+        <import type="java.util.List"/>
+
+        <variable
+            name="user"
+            type="User"/>
+
+        <variable
+            name="data"
+            type="List&lt;User&gt;"/>
+
+        <variable
+            name="onclickListener"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnbtn"
+            android:onClick="@{onclickListener}"
+            android:text="更新一下"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recylerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:data="@{data}"/>
+
+    </LinearLayout>
+</layout>
