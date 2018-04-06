@@ -6,4 +6,4 @@ MVVM模式的学习
 ![](https://github.com/MrGaoGang/MVVMDemo/blob/master/images/main.png)
 
 运行的效果：
-![](https://github.com/MrGaoGang/MVVMDemo/blob/master/images/main_g.png)
+![](https://github.com/MrGaoGang/MVVMDemo/blob/master/images/main_g.gif)
